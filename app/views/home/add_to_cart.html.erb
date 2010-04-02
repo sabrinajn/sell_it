@@ -1,0 +1,26 @@
+<h2>Cart Items</h2>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+  </tr>
+
+  <% for cart_item in @cart.cart_items %>
+    <tr>
+      <td><%=h cart_item.title %></td>
+      <td><%=h cart_item.price %></td>
+      <td><%=h cart_item.quantity %></td>
+      <td><%=h cart_item.total %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td colspan="3">Total:</td>
+    <td><%=h @cart.total %></td>
+  </tr>
+
+</table>
+
+<%= button_to "Empty cart", :action => :empty_cart %>
+

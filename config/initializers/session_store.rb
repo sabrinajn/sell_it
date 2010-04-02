@@ -5,11 +5,11 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_sell_it_session',
-  :secret      => '124133d93308e041cec20e44052521a401524912f616db71892c46cbd3e624c39113a10079d388e422302858b36a733a5099824fc286eda302919bf3ec7fde9d'
+  :key         => '_SellIt_session',
+  :secret      => '41cb65850dfd7837e982c8cc7001a4be31397358646cb23dcf3dd1ca7c51e9ab0d1512a4bc3ca1aa0e92f7be1369cb337a8ef7db9c38589004804ce733aad09c'
 }
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rake db:sessions:create")
-# ActionController::Base.session_store = :active_record_store
+ActionController::Base.session_store = :active_record_store
