@@ -1,9 +1,22 @@
 class HomeController < ApplicationController
+  layout 'home'
+  
   def index
     @products = Product.find(:all)
+    @product_types = ProductType.find(:all)
+    @cart = find_cart
+
   end
 
-def add_to_cart
+  def show
+    @product_type = ProductType.find(params[:id])
+    @product_types = ProductType.find(:all)
+    @cart = find_cart
+
+  end
+
+
+  def add_to_cart
     product = Product.find(params[:id])
     @cart = find_cart
     @cart.add_product(product)
@@ -12,6 +25,11 @@ def add_to_cart
     flash[:notice] = "Invalid product"
     redirect_to :action => 'index'
   end
+
+  def show_cart
+    @cart = find_cart
+  end
+
 
   def empty_cart
     session[:cart] = nil

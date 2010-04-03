@@ -1,28 +1,79 @@
-<h1>Listing products</h1>
+﻿<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td style="width:130px">
+            <table cellpadding="0" cellspacing="0" border="0" class="box_header_txt">
+                <tr>
+                    <td><%= image_tag("../images/title1_left.jpg") %></td>
+                    <td style="width:100%">Admin:</td>
+                    <td><%= image_tag("../images/title1_right.jpg") %></td>
+                </tr>
+            </table>
+            <br style="line-height:2px" />
+            <table cellpadding="0" cellspacing="0" border="0" class="box_body c1">
+                <tr>
+                    <td><%= image_tag("../images/c1_tl.jpg") %></td>
+                    <td class="c1_top"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"9") %></td>
+                    <td><%= image_tag("../images/c1_tr.jpg") %></td>
+                </tr>
+                <tr>
+                    <td class="c1_left"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
+                    <td>
+                        <br style="line-height:5px" />
+                        <ul>
+                          <li class="bg_list"><%= link_to "Product Types", product_types_path %></li>
+                          <li class="bg_list"><%= link_to "Products", products_path %></li>
+                        </ul>
+                        <br style="line-height:10px" />
+                    </td>
+                    <td class="c1_right"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
+                </tr>
+                <tr>
+                    <td><%= image_tag("../images/c1_bl.jpg") %></td>
+                    <td class="c1_bottom"><%= image_tag("../images/spacer.gif", :width=>"1",  :height=>"9") %></td>
+                    <td><%= image_tag("../images/c1_br.jpg") %></td>
+                </tr>
+            </table>
+        </td>
+        <td><%= image_tag("../images/spacer.gif", :width=>"3", :height=>"1") %></td>
+        <td style="width:600px">
+            <% if flash[:notice] -%>
+              <div id="notice"><%= flash[:notice] %></div>
+            <% end -%>
+            <table cellpadding="0" cellspacing="0" border="0" class="cont_header_txt">
+                <tr>
+                    <td><%= image_tag("../images/title2_left.jpg") %></td>
+                    <td style="width:100%">Listing Products</td>
+                    <td><%= image_tag("../images/title2_right.jpg")%></td>
+                </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" border="0" class="product">
+                <tr>
+                    <td style="padding:0px 2px 3px 2px;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <th>Type</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                          </tr>
 
-<table>
-  <tr>
-    <th>Product Type</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Image url</th>
-  </tr>
+                        <% @products.each do |product| %>
+                          <tr>
+                            <td><%=h product.product_type.title unless product.product_type.nil?%></td>
+                            <td><%=h product.title %></td>
+                            <td><%=h product.description %></td>
+                            <td><%=h product.price %></td>
+                            <td><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+                          </tr>
+                        <% end %>
+                        </table>
+                                                <br />
 
-<% @products.each do |product| %>
-  <tr>
-    <td><%=h product.product_type.title unless product.product_type.nil?%></td>
-    <td><%=h product.title %></td>
-    <td><%=h product.description %></td>
-    <td><%=h product.price %></td>
-    <td><%=h product.image_url %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+                        <%= link_to 'New product', new_product_path %>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
-
-<br />
-
-<%= link_to 'New product', new_product_path %>

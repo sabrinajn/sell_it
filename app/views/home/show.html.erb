@@ -3,20 +3,20 @@
         <td style="width:177px">
             <table cellpadding="0" cellspacing="0" border="0" class="box_header_txt">
                 <tr>
-                    <td><%= image_tag("title1_left.jpg") %></td>
+                    <td><%= image_tag("../images/title1_left.jpg") %></td>
                     <td style="width:100%">Categories:</td>
-                    <td><%= image_tag("title1_right.jpg") %></td>
+                    <td><%= image_tag("../images/title1_right.jpg") %></td>
                 </tr>
             </table>
             <br style="line-height:2px" />
             <table cellpadding="0" cellspacing="0" border="0" class="box_body c1">
                 <tr>
-                    <td><%= image_tag("c1_tl.jpg") %></td>
-                    <td class="c1_top"><%= image_tag("spacer.gif", :width=>"9", :height=>"9") %></td>
-                    <td><%= image_tag("c1_tr.jpg") %></td>
+                    <td><%= image_tag("../images/c1_tl.jpg") %></td>
+                    <td class="c1_top"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"9") %></td>
+                    <td><%= image_tag("../images/c1_tr.jpg") %></td>
                 </tr>
                 <tr>
-                    <td class="c1_left"><%= image_tag("spacer.gif", :width=>"9", :height=>"1") %></td>
+                    <td class="c1_left"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
                     <td>
                         <br style="line-height:5px" />
                         <ul>
@@ -26,42 +26,42 @@
                         </ul>
                         <br style="line-height:10px" />
                     </td>
-                    <td class="c1_right"><%= image_tag("spacer.gif", :width=>"9", :height=>"1") %></td>
+                    <td class="c1_right"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
                 </tr>
                 <tr>
-                    <td><%= image_tag("c1_bl.jpg") %></td>
-                    <td class="c1_bottom"><%= image_tag("spacer.gif", :width=>"1",  :height=>"9") %></td>
-                    <td><%= image_tag("c1_br.jpg") %></td>
+                    <td><%= image_tag("../images/c1_bl.jpg") %></td>
+                    <td class="c1_bottom"><%= image_tag("../images/spacer.gif", :width=>"1",  :height=>"9") %></td>
+                    <td><%= image_tag("../images/c1_br.jpg") %></td>
                 </tr>
             </table>
         </td>
-        <td><%= image_tag("spacer.gif", :width=>"3", :height=>"1") %></td>
+        <td><%= image_tag("../images/spacer.gif", :width=>"3", :height=>"1") %></td>
         <td style="width:600px">
             <% if flash[:notice] -%>
               <div id="notice"><%= flash[:notice] %></div>
             <% end -%>
             <table cellpadding="0" cellspacing="0" border="0" class="cont_header_txt">
                 <tr>
-                    <td><%= image_tag("title2_left.jpg") %></td>
-                    <td style="width:100%">All Products</td>
-                    <td><%= image_tag("title2_right.jpg")%></td>
+                    <td><%= image_tag("../images/title2_left.jpg") %></td>
+                    <td style="width:100%">Category > <%=h @product_type.title%> > Products</td>
+                    <td><%= image_tag("../images/title2_right.jpg")%></td>
                 </tr>
             </table>
             <table cellpadding="0" cellspacing="0" border="0" class="product">
                 <tr>
                     <td style="padding:0px 2px 3px 2px;">
                         <table cellpadding="0" cellspacing="0" border="0">
-                          <% for product in @products -%>
+                          <% for product in @product_type.products -%>
                             <tr>
                                 <td style="width:550px">
                                   <table cellpadding="0" cellspacing="0" border="0" class="c2">
                                     <tr>
-                                      <td><%= image_tag("c2_tl.jpg") %></td>
-                                      <td class="c2_top"><%= image_tag("spacer.gif", :width=>"9", :height=>"9") %></td>
-                                      <td><%= image_tag("c2_tr.jpg") %></td>
+                                      <td><%= image_tag("../images/c2_tl.jpg") %></td>
+                                      <td class="c2_top"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"9") %></td>
+                                      <td><%= image_tag("../images/c2_tr.jpg") %></td>
                                     </tr>
                                     <tr>
-                                      <td class="c2_left"><%= image_tag("spacer.gif", :width=>"9", :height=>"1") %></td>
+                                      <td class="c2_left"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
                                       <td style="padding:7px 5px 4px 10px;">
                                         <table >
                                           <tr>
@@ -75,15 +75,15 @@
                                           </tr>
                                         </table>
                                       </td>
-                                      <td class="c2_right"><%= image_tag("spacer.gif", :width=>"9", :height=>"1") %></td>                                    </tr>
+                                      <td class="c2_right"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>                                    </tr>
                                     <tr>
-                                      <td><%= image_tag("c2_bl.jpg") %></td>
-                                      <td class="c2_bottom"><%= image_tag("spacer.gif", :width=>"1", :height=>"9") %></td>
-                                      <td><%= image_tag("c2_br.jpg") %></td>
+                                      <td><%= image_tag("../images/c2_bl.jpg") %></td>
+                                      <td class="c2_bottom"><%= image_tag("../images/spacer.gif", :width=>"1", :height=>"9") %></td>
+                                      <td><%= image_tag("../images/c2_br.jpg") %></td>
                                     </tr>
                                   </table>
                                 </td>
-                              <td><%= image_tag("spacer.gif", :width=>"2", :height=>"1") %></td>
+                              <td><%= image_tag("../images/spacer.gif", :width=>"2", :height=>"1") %></td>
                             </tr>
                           <% end %>
                         </table>

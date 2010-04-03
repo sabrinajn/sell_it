@@ -1,6 +1,6 @@
 ﻿<table cellpadding="0" cellspacing="0" border="0">
     <tr>
-        <td style="width:130px">
+        <td style="width:177px">
             <table cellpadding="0" cellspacing="0" border="0" class="box_header_txt">
                 <tr>
                     <td><%= image_tag("../images/title1_left.jpg") %></td>
@@ -42,7 +42,7 @@
             <table cellpadding="0" cellspacing="0" border="0" class="cont_header_txt">
                 <tr>
                     <td><%= image_tag("../images/title2_left.jpg") %></td>
-                    <td style="width:100%">Listing Product Types</td>
+                    <td style="width:100%">Page Admin:</td>
                     <td><%= image_tag("../images/title2_right.jpg")%></td>
                 </tr>
             </table>
@@ -50,21 +50,8 @@
                 <tr>
                     <td style="padding:0px 2px 3px 2px;">
                         <table cellpadding="0" cellspacing="0" border="0">
-                          <tr>
-                            <th>Title</th>
-                          </tr>
 
-                          <% @product_types.each do |product_type| %>
-                            <tr>
-                              <td><%=h product_type.title %></td>
-                              <td><%= link_to 'Show', product_type %></td>
-                              <td><%= link_to 'Edit', edit_product_type_path(product_type) %></td>
-                              <td><%= link_to 'Destroy', product_type, :confirm => 'Are you sure?', :method => :delete %></td>
-                            </tr>
-                          <% end %>
-                        </table><br />
-
-                        <%= link_to 'New product type', new_product_type_path %>
+                        </table>
                     </td>
                 </tr>
             </table>
