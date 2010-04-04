@@ -1,0 +1,13 @@
+development: &development
+  developer: true
+  base: "http://localhost:3000"
+  return_to: "/pedido/efetuado"
+  email: rtimbo@ikwa.com.br
+
+test:
+  <<: *development
+
+production:
+  authenticity_token: 9CA8D46AF0C6177CB4C23D76CAF5E4B0
+  email: rtimbo@ikwa.com.br
+  return_to: "/pedido/efetuado"
