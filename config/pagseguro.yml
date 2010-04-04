@@ -8,6 +8,6 @@ test:
   <<: *development
 
 production:
-  authenticity_token: 9CA8D46AF0C6177CB4C23D76CAF5E4B0
+  authenticity_token: C8ABC3DAE4324C4499115846814505C3
   email: rtimbo@ikwa.com.br
   return_to: "/pedido/efetuado"

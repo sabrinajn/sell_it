@@ -31351,3 +31351,127 @@ ActionController::RoutingError (No route matches "/images/top.jpg" with {:method
   
 
 Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing HomeController#show_cart (for 127.0.0.1 at 2010-04-04 20:39:18) [GET]
+Rendering template within layouts/home
+Rendering home/show_cart
+  [4;35;1mProduct Columns (7.3ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 39ms (View: 23, DB: 8) | 200 OK [http://localhost/home/show_cart]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/top.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-04 20:39:27) [GET]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProductType Load (0.2ms)[0m   [0mSELECT * FROM `product_types` [0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mProductType Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `product_types`[0m
+  [4;35;1mProduct Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 73ms (View: 24, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/li_bg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/top.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing HomeController#add_to_cart (for 127.0.0.1 at 2010-04-04 20:39:29) [POST]
+  Parameters: {"authenticity_token"=>"reynhnKwdNfFRe/Njd5xzYQZr0TGETZ/F8P0tC9UXeQ=", "id"=>"2"}
+  [4;36;1mProduct Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/home
+Rendering home/add_to_cart
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/home/add_to_cart/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/top.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-04-04 20:39:48) [GET]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProductType Load (0.2ms)[0m   [0mSELECT * FROM `product_types` [0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mProductType Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `product_types`[0m
+  [4;35;1mProduct Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 96ms (View: 19, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/li_bg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: Disabling sessions for a single controller has been deprecated. Sessions are now lazy loaded. So if you don't access them, consider them off. You can still modify the session cookie options with request.session_options.. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:5)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from /Users/rafaeltimbo/Applications/sell_it/app/controllers/application_controller.rb:8)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 20:39:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/top.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
