@@ -15,7 +15,7 @@ class Cart
   end
 
   def total_price
-    @cart_items.sum { |item| item.price }
+    @cart_items.sum { |item| item.total }
   end
 
 
@@ -24,3 +24,4 @@ class Cart
   end
 
 end
+
