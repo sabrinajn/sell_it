@@ -46,7 +46,7 @@ class HomeController < ApplicationController
 
   def success
     session[:cart] = nil
-    flash[:notice] = "success"
+    flash[:notice] = "Thanks for your order! We are waiting confirmation of payment!"
     redirect_to :action => 'index'
   end
 
