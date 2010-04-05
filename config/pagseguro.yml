@@ -1,7 +1,7 @@
 development: &development
   developer: true
   base: "http://localhost:3000"
-  return_to: "/home/index"
+  return_to: "/home/success"
   email: rtimbo@ikwa.com.br
 
 test:
@@ -10,5 +10,5 @@ test:
 production:
   authenticity_token: C8ABC3DAE4324C4499115846814505C3
   email: rtimbo@ikwa.com.br
-  return_to: "/home/index"
+  return_to: "/home/success"
 

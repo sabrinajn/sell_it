@@ -20,6 +20,12 @@ class HomeController < ApplicationController
     product = Product.find(params[:id])
     @cart = find_cart
     @cart.add_product(product)
+    id = rand 10000
+    @order = PagSeguro::Order.new(id)
+
+    @cart.cart_items.each do |product|
+      product.quantity.times do @order.add :id => product.id, :price => product.price, :description => product.title end
+    end
   rescue ActiveRecord::RecordNotFound
     logger.error("Attempt to access invalid product #{params[:id]}")
     flash[:notice] = "Invalid product"
@@ -35,6 +41,13 @@ class HomeController < ApplicationController
     @cart.cart_items.each do |product|
       product.quantity.times do @order.add :id => product.id, :price => product.price, :description => product.title end
     end
+  end
+
+
+  def success
+    session[:cart] = nil
+    flash[:notice] = "success"
+    redirect_to :action => 'index'
   end
 
 

@@ -43,7 +43,9 @@
                       </table><br/>
 
                       <%= button_to "Empty cart", :action => :empty_cart %>
-                      <%= pagseguro_form @order, :submit => "Efetuar pagamento!" %>
+                      <div align="right">
+                        <%= pagseguro_form @order, :submit => "Efetuar pagamento!" %>
+                      </div>
 
                     </td>
                     <td class="c1_right"><%= image_tag("../images/spacer.gif", :width=>"9", :height=>"1") %></td>
