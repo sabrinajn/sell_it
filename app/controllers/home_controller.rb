@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   layout 'home'
-  
+
   def index
     @products = Product.find(:all)
     @product_types = ProductType.find(:all)
@@ -28,6 +28,13 @@ class HomeController < ApplicationController
 
   def show_cart
     @cart = find_cart
+
+    id = rand 10000
+    @order = PagSeguro::Order.new(id)
+
+    @cart.cart_items.each do |product|
+      product.quantity.times do @order.add :id => product.id, :price => product.price, :description => product.title end
+    end
   end
 
 
@@ -37,6 +44,7 @@ class HomeController < ApplicationController
     redirect_to :action => 'index'
   end
 
+
 private
   def find_cart
     #cria um novo carrinho, caso naum exista nenhum
@@ -44,3 +52,4 @@ private
   end
 
 end
+
